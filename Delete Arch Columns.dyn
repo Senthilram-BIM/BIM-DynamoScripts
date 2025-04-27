@@ -1,0 +1,201 @@
+{
+  "Uuid": "d6090fd4-b87d-401d-b868-785a8a546207",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Delete Arch Columns",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "1647f21737924871918ff5b50e9dfc79",
+      "Inputs": [
+        {
+          "Id": "df2abf6e5e8742cab9120261df16dad8",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af2effc4c613471a8d7fe578fe16cd4b",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 134,
+      "SelectedString": "OST_Columns",
+      "NodeType": "ExtensionNode",
+      "Id": "bdf6c65c9c0e43ddb5656a9de5e357b0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d1bed392b943417b977ae9d2b65717f0",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "archilab.Revit.Elements.Elements.Delete@Revit.Elements.Element",
+      "Id": "a8f1fb20d6f8483e8898d713d813a880",
+      "Inputs": [
+        {
+          "Id": "fee054461fab4dbdaa375f87c223d7bc",
+          "Name": "element",
+          "Description": "Element to delete.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9c087ca997f24f809aee5e2f0da86467",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Delete element from Revit DB.\n\nElements.Delete (element: Element): bool"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "af2effc4c613471a8d7fe578fe16cd4b",
+      "End": "fee054461fab4dbdaa375f87c223d7bc",
+      "Id": "8391a9ae2c8e49a0bf158b282e6b50cc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d1bed392b943417b977ae9d2b65717f0",
+      "End": "df2abf6e5e8742cab9120261df16dad8",
+      "Id": "deb646b9eb194331a88c56a8b4aa7e7f",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "archi-lab.net",
+      "Version": "2024.217.1024",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "a8f1fb20d6f8483e8898d713d813a880"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.18",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "6.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.0.3472",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "1647f21737924871918ff5b50e9dfc79",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 995.67289520251222,
+        "Y": 374.058544462224
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "bdf6c65c9c0e43ddb5656a9de5e357b0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 651.8,
+        "Y": 364.0
+      },
+      {
+        "Name": "Elements.Delete",
+        "ShowGeometry": true,
+        "Id": "a8f1fb20d6f8483e8898d713d813a880",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1401.2603573872279,
+        "Y": 384.2856700243093
+      }
+    ],
+    "Annotations": [],
+    "X": -207.0873033114413,
+    "Y": -17.032676882010946,
+    "Zoom": 0.46612525321115439
+  }
+}
